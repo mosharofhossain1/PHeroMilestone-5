@@ -12,17 +12,92 @@
         <h1>Wellcom To My Dom </h1>
     </header>
     <main>
-        <h1>My Awesome Dom dere Baba</h1>
-        <ul>
-            <li>List one</li>
-            <li>List one</li>
-            <li>List one</li>
-            <li>List one</li>
-        </ul>
+        <section>
+            <h1>My Awesome Dom dere Baba</h1>
+            <ul>
+                <li>List one</li>
+                <li>List one</li>
+                <li>List one</li>
+                <li>List one</li>
+            </ul>
+        </section>
+        <section class="place_container">
+            <h1 id="place-1">My bloge place 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia recusandae in possimus incidunt, aperiam
+                quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
+                tempora sit!</p>
+            <ul>
+                <li class="important_places">Place 1</li>
+                <li class="important_places">Place 2</li>
+                <li class="important_places">Place 3</li>
+                <li>Place 4</li>
+            </ul>
+        </section>
+        <section>
+            <h1>My bloge place 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia recusandae in possimus incidunt, aperiam
+                quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
+                tempora sit!</p>
+        </section>
+        <section>
+            <h1>My bloge place 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia recusandae in possimus incidunt, aperiam
+                quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
+                tempora sit!</p>
+        </section>
     </main>
     <script src="first.js"></script>
     <script>
         // console.log('adding js inside the html file');
+
+        // 1. getElementsByTagName();
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const li of liCollection) {
+            // console.log(li)
+            // console.log(li.innerText)
+        }
+
+        const allHeading = document.getElementsByTagName('h1');
+        // console.log(allHeading)
+        for (const h1 of allHeading) {
+            // console.log(h1)
+            // console.log(h1.innerText)
+        }
+
+        //2. getElementById() - loop kora jai na 
+        const placeTitle = document.getElementById('place-1');
+        placeTitle.innerText = 'This Title is changed By js Power';
+        console.log(placeTitle)
+        // console.log(places);
+        /* for (const place of places) {
+            console.log(place)
+        } */
+
+        //3. getElementsByClassName() -> for of loop kora jai
+        const places = document.getElementsByClassName('important_places');
+        // console.log(places);
+        for (const place of places) {
+            // console.log(place);
+            // console.log(place.innerText);
+        }
+
+        // 4. querySelectorAll(); - sob gula return kore dey [for of loop kora jai]
+        const someLi = document.querySelectorAll('.place_container li');
+        // console.log(someLi);
+        for (const li of someLi) {
+            // console.log(li)
+            console.log(li.innerText);
+        }
+
+        // for of loop kora jai na 
+        // 5. querySelector(); - list er first element select kora jai ata deya 
+        const firstLi = document.querySelector('.place_container li');
+        // console.log(firstLi);
+        for (const li of firstLi) {
+            console.log(li)
+        }
+
     </script>
 </body>
 
