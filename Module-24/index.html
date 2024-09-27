@@ -5,23 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM </title>
+    <style>
+        .font {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .fontSize {
+            font-size: 3rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>Wellcom To My Dom </h1>
     </header>
-    <main>
-        <section>
+    <main id="mainContainer">
+        <section id="firstSection">
             <h1>My Awesome Dom dere Baba</h1>
-            <ul>
+            <ul id="parentList">
                 <li>List one</li>
                 <li>List one</li>
                 <li>List one</li>
                 <li>List one</li>
             </ul>
         </section>
-        <section class="place_container">
+        <section class="place_container" id="placeContainer">
             <h1 id="place-1">My bloge place 1</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia recusandae in possimus incidunt, aperiam
                 quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
@@ -31,6 +40,7 @@
                 <li class="important_places">Place 2</li>
                 <li class="important_places">Place 3</li>
                 <li>Place 4</li>
+                <li>16318 TR 786 - Train Location SMS System</li>
             </ul>
         </section>
         <section>
@@ -39,14 +49,24 @@
                 quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
                 tempora sit!</p>
         </section>
-        <section>
+        <section id="lastSection">
             <h1>My bloge place 3</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia recusandae in possimus incidunt, aperiam
+            <p class="fontSize">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia recusandae in
+                possimus incidunt, aperiam
                 quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
                 tempora sit!</p>
+            possimus incidunt, aperiam
+            quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
+            tempora sit!</p>
+            possimus incidunt, aperiam
+            quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
+            tempora sit!</p>
+            possimus incidunt, aperiam
+            quibusdam voluptatum, suscipit quod, id nobis eos reprehenderit ex atque doloremque rerum dolorum iusto
+            tempora sit!</p>
         </section>
     </main>
-    <script src="first.js"></script>
+
     <script>
         // console.log('adding js inside the html file');
 
@@ -65,14 +85,12 @@
             // console.log(h1.innerText)
         }
 
-        //2. getElementById() - loop kora jai na 
+        //2. getElementById() - loop kora jai na [css style use kora jai]
         const placeTitle = document.getElementById('place-1');
-        placeTitle.innerText = 'This Title is changed By js Power';
-        console.log(placeTitle)
+        // placeTitle.innerText = 'This Title is changed By js Power';
+        // console.log(placeTitle)
         // console.log(places);
-        /* for (const place of places) {
-            console.log(place)
-        } */
+        placeTitle.style.backgroundColor = 'yellow'
 
         //3. getElementsByClassName() -> for of loop kora jai
         const places = document.getElementsByClassName('important_places');
@@ -94,11 +112,14 @@
         // 5. querySelector(); - list er first element select kora jai ata deya 
         const firstLi = document.querySelector('.place_container li');
         // console.log(firstLi);
-        for (const li of firstLi) {
-            console.log(li)
-        }
+        // for (const li of firstLi) {
+        //     console.log(li)
+        // }
+
 
     </script>
+    <script src="append.js"></script>
+    <script src="first.js"></script>
 </body>
 
 </html>
