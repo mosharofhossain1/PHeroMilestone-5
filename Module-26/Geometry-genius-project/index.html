@@ -47,13 +47,16 @@
                                     <h5 class="card-title">Rectangle</h5>
                                     <p class="card-text">Area (A) = W X I</p>
                                     <div class="mb-3">
-                                        <input id="rectangleBase" class="w-25 px-1" type="text" placeholder="W">
+                                        <input id="rectangleWidth" class="w-25 px-1" type="text" placeholder="W">
                                         <span>cm</span>
                                         <input id="rectangleHeight" class="w-25 px-1" type="text" placeholder="I">
                                         <span>cm</span>
-
+                                        <div>
+                                            <p>Area : <span id="rectangleArea"></span> <span>cm</span><sup>2</sup> </p>
+                                        </div>
                                     </div>
-                                    <button onclick="" class="btn btn-primary w-100">Calculate</button>
+                                    <button onclick="calculateRectangleArea()"
+                                        class="btn btn-primary w-100">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -64,15 +67,19 @@
                                 <img src="images/parallelogram.png" class="card-img-top img-fluid" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Peralelogram</h5>
-                                    <p class="card-text">Area (A) = 0.5 X b X h</p>
+                                    <p class="card-text">Area (A) = B X h</p>
                                     <div class="mb-3">
-                                        <input class="w-25 px-1" type="text" placeholder="B">
+                                        <input id="peralelogramBase" class="w-25 px-1" type="text" placeholder="B">
                                         <span>cm</span>
-                                        <input class="w-25 px-1" type="text" placeholder="h">
+                                        <input id="peralelogramHeight" class="w-25 px-1" type="text" placeholder="h">
                                         <span>cm</span>
-
+                                        <div>
+                                            <p>Area : <span id="peralelogramArea"></span> <span>cm</span><sup>2</sup>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary w-100">Calculate</button>
+                                    <button onclick="calculatePeralelogram()"
+                                        class="btn btn-primary w-100">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -83,15 +90,18 @@
                                 <img src="images/rhombus.png" class="card-img-top img-fluid" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Rombos</h5>
-                                    <p class="card-text">Area (A) = 0.5 X b X h</p>
+                                    <p class="card-text">Area (A) = 0.5 X D1 X D2</p>
                                     <div class="mb-3">
-                                        <input class="w-25 px-1" type="text" placeholder="B">
+                                        <input id="rombosD1" class="w-25 px-1" type="text" placeholder="d1">
                                         <span>cm</span>
-                                        <input class="w-25 px-1" type="text" placeholder="h">
+                                        <input id="rombosD2" class="w-25 px-1" type="text" placeholder="d2">
                                         <span>cm</span>
-
+                                        <div>
+                                            <p>Area : <span id="rombosArea"></span> <span>cm</span><sup>2</sup>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary w-100">Calculate</button>
+                                    <button onclick="calculateRombos()" class="btn btn-primary w-100">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +113,7 @@
                                 <img src="images/pentagon.png" class="card-img-top img-fluid" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Pentagon</h5>
-                                    <p class="card-text">Area (A) = 0.5 X b X h</p>
+                                    <p class="card-text">Area (A) = 0.5 X P X B</p>
                                     <div class="mb-3">
                                         <input class="w-25 px-1" type="text" placeholder="B">
                                         <span>cm</span>
@@ -147,6 +157,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/triangle-calculate.js"></script>
     <script src="js/rectangle.js"></script>
+    <script src="js/peralelogram.js"></script>
+    <script src="js/rombos.js"></script>
 </body>
 
 </html>
